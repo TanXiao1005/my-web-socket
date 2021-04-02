@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>通讯页</title>
+		<link rel="stylesheet" href="css/newChat.css">
+		<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+		<script type="text/javascript" src="js/newChat.js"></script>
+	</head>
+	<body>
+		<!-- 外部大盒子 -->
+		<div class="aox" id="aox">
+			<!-- 左侧盒子 -->
+			<div class="box">
+				<!-- 左侧顶部盒子 -->
+				<div class="b_top" id="b_top">
+					<div class="b_t_title">WebSocket 即时通讯。</div>
+				</div>
+				<!-- 左侧中部盒子 -->
+				<div class="b_center" id="messageDiv">
+				</div>
+				<!-- 左侧底部盒子 -->
+				<div class="b_buttom">
+					<textarea id="writeChatText"></textarea>
+					<button class="clearChatText" onclick="clearChatText()">清 空</button>
+					<button class="sendChatText" onclick="sendChatMessage()">发 送</button>
+				</div>
+			</div>
+			<!-- 右侧盒子 -->
+			<div class="cox">
+				<div id="connectStateColor"></div>
+				<div class="sb">连接信息：</div>
+				<input type="text" id="connectState" value="状态：未连接" disabled>
+				<input type="text" id="connectCount" value="在线：0人" disabled>
+				<div class="sb">连接配置：</div>
+				<input type="text" id="connectAddress" placeholder="连接地址">
+				<input type="text" id="connectUserName" maxlength="10" placeholder="用户昵称">
+				<button class="b_left" id="connectServer" onclick="connectServer()">连 接</button>
+				<button class="b_right" id="connectClose" onclick="connectClose()" disabled>断 开</button>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,1 @@
+nohup java -jar my-web-socket.jar >runlog.log 2>&1 &
